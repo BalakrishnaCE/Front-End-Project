@@ -5,6 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Balakrishna Front end project</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <!-- ====== Email JS====== -->
+   
+
+    <!-- *********** Udated Later ******** -->
+
+    <!-- ====== Email JS ends====== -->
+
     <link rel="stylesheet" href="index.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,6 +30,7 @@
         <header class="container header__container">
             <h5 >Hello I'm</h5>
             <h1 >BALAKRISHNA</h1>
+            <img  src="/Assets/Logo.ico" class="header__mylogo" alt="my logo">
             <h5 class="text-light" >Full Stack Developer</h5>
             <div class="cta">
                 <a class="btn" download href="/Assets/Balakrishna _ Resume.pdf">My CV</a>
@@ -49,28 +59,49 @@
 
 <div>
     <section id="nav_section">
-        <nav>
-            <a href="#" class="activeNav"><i class="fa fa-home" ></i></a>
-            <a href="#about"><i class="fa fa-user" ></i></a>
-            <a href="#experience"><i class="fa fa-book" ></i></a>
-            <a href="#services"><i class="fa fa-heartbeat" ></i></a>
-            <a href="#contact"><i class="fa fa-address-book-o" ></i></a>
+        <nav id="activeNav">
+            <a href="#"  id="nav-n" class="nav_active"><i class="fa fa-home" ></i></a>
+            <a href="#about"  class="nav_active"><i class="fa fa-user" ></i></a>
+            <a href="#experience" class="nav_active"><i class="fa fa-book" ></i></a>
+            <a href="#services" class="nav_active"><i class="fa fa-heartbeat" ></i></a>
+            <a href="#contact" class="nav_active"><i class="fa fa-address-book-o" ></i></a>
         </nav>
     </section>
 
     <!-- =======Nav Script ======= -->
     <script>
-        var activeNav= document.getElementsByClassName=("activeNav")
 
-        if ("<a>"=== "#") {
-            activeNav= active
-            
-        } else {
-            ""
-        }
+
+                //  *********** should work more on  Script for focusing content ************
+
+
+
+//         // Get the container element
+//         var btnContainer = document.getElementById("activeNav");
+
+//         // Get all buttons with class="btn" inside the container
+//         var btns = btnContainer.getElementsByClassName("nav_active");
+
+//         // Loop through the buttons and add the active class to the current/clicked button
+//         for (var i = 0; i < btns.length; i++) {
+//   btns[i].addEventListener("click", function() {
+//     var current = document.getElementsByClassName("active");
+
+//     // If there's no active class
+//     if (current.length > 0) {
+//       current[0].className = current[0].className.replace(" active", "");
+//     }
+
+//     // Add the active class to the current/clicked button
+//     this.className += " active";
+//   });
+// }
+        
     </script>
 </div>
 <!-- =======Navigation  ends  here======= -->
+
+
 <!-- =======About starts here======= -->
 <div>
     <section id="about">
@@ -106,7 +137,11 @@
                         <small>Novel Office</small>
                     </article>         
                 </div>
-                <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt perferendis soluta, magnam nesciunt veniam consequatur possimus labore esse dicta exercitationem, amet vero! Nostrum ipsam facilis sit nesciunt molestiae alias! Ratione.</p>
+                <p> <em> Civil Engineering graduate </em> from <strong>Vemana Institute of Technology</strong>. 
+                    For almost a year, I worked as a <em> Project Engineer</em> in <strong>Novel Office</strong>. 
+                    I am interested in the subject of  Computer Science. 
+                    So I enrolled in a Full Stack Developer course at <strong> Board Infinity</strong>.
+                </p>
                 <a href="#contact" class="btn btn-primary"> Let's Talk</a>
             </div>
         </div>
@@ -118,7 +153,7 @@
 <div>
     <section id="experience">
         <h5>The Skills I have</h5>
-        <h2>My Experience</h2>
+        <h2>My Skillset</h2>
 
         <div class="container  experience__container">
             <div class="experience__frontend">
@@ -128,7 +163,7 @@
                         <i class="fa fa-certificate experience_details-icon" aria-hidden="true"></i>
                         <div>
                         <h4>HTML</h4>                        
-                        <small class="text_light">Experienced</small>
+                        <small class="text_light">Advanced</small>
                         </div>
                     </article>
                     <article class="experience__details">
@@ -142,13 +177,13 @@
                         <i class="fa fa-certificate experience_details-icon" aria-hidden="true"></i>
                         <div>
                         <h4>Java Script</h4>                        
-                        <small class="text_light">Experienced</small>
+                        <small class="text_light">Advanced</small>
                         </div>
                     </article><article class="experience__details">
                         <i class="fa fa-certificate experience_details-icon" aria-hidden="true"></i>
                         <div>
                         <h4>BootStrap</h4>                        
-                        <small class="text_light">Experienced</small>
+                        <small class="text_light">Intermediate</small>
                         </div>
                     </article><article class="experience__details">
                         <i class="fa fa-certificate experience_details-icon" aria-hidden="true"></i>
@@ -170,7 +205,7 @@
                         <i class="fa fa-certificate experience_details-icon" aria-hidden="true"></i>
                         <div>
                             <h4>Node JS</h4>
-                            <small class="text_light">Internmediate</small>
+                            <small class="text_light">Basics</small>
                         </div>
                     </article>
                     <article class="experience__details">
@@ -184,7 +219,7 @@
                         <i class="fa fa-certificate experience_details-icon" aria-hidden="true"></i>
                         <div>
                             <h4>JAVA </h4>
-                            <small class="text_light">Learning</small>
+                            <small class="text_light">Basics</small>
                         </div>
                     </article><article class="experience__details">
                         <i class="fa fa-certificate experience_details-icon" aria-hidden="true"></i>
@@ -197,7 +232,7 @@
                         <i class="fa fa-certificate experience_details-icon" aria-hidden="true"></i>
                         <div>
                             <h4>Python</h4>                        
-                            <small class="text_light">Basic</small>
+                            <small class="text_light">Learning</small>
                         </div>
                     </article>
                 </div>
@@ -211,7 +246,7 @@
 <!-- =======services starts here======= -->
 
 <section id="services">
-    <h5>What I Offer</h5>
+    <h5> Examples of the services I can offer after I have mastered the full stack </h5>
     <h2>Services</h2>
 
     <div class="container services__container">
@@ -244,7 +279,7 @@
         </article>
 
 
-     <!-- ===========UI/UX over======    -->
+     <!-- ===========UI/UX over=========    -->
 
         <article class="service">
             <div class="service__head">
@@ -317,67 +352,62 @@
 <!-- =======potfolio starts here======= -->
 <div>
     <section id="portfolio">
-        <h5>My recent Work</h5>
-        <h2>portfolio</h2>
+        <h5>New Work I've done</h5>
+        <h2>Portfolio</h2>
         <div class="container portfolio__container">
             <article class="portfolio__item">
                 <div class="portfolio__item-image">
                     <img src="/Assets/portfolio1.jpg" alt="portfolio1">
                 </div>
-                <h3>This is portfolio item title</h3>
+                <h3>Calculator</h3>
                 <div class="portfolio__item-cta">
-                    <a href="http://github.com" class="btn" target="_blank">Github</a>
-                    <a href="http://dribbble.com/Alien_pixels" class="btn btn-primary" target="_blank">Live Demo</a>
+                    <a href="https://github.com/BalakrishnaCE/" class="btn" target="_blank">Github</a>
+                    
                 </div>
             </article>
             <article class="portfolio__item">
                 <div class="portfolio__item-image">
-                    <img src="/Assets/portfolio1.jpg" alt="portfolio1">
+                    <img src="/Assets/portfolio2.jpg" alt="portfolio1">
                 </div>
-                <h3>This is portfolio item title</h3>
+                <h3>Clock</h3>
                 <div class="portfolio__item-cta">
-                    <a href="http://github.com" class="btn" target="_blank">Github</a>
-                    <a href="http://dribbble.com/Alien_pixels" class="btn btn-primary" target="_blank">Live Demo</a>
+                    <a href="https://github.com/BalakrishnaCE/" class="btn" target="_blank">Github</a>
                 </div>
             </article>
             <article class="portfolio__item">
                 <div class="portfolio__item-image">
-                    <img src="/Assets/portfolio1.jpg" alt="portfolio1">
+                    <img src="/Assets/portfolio3.jpg" alt="portfolio1">
                 </div>
-                <h3>This is portfolio item title</h3>
+                <h3>Forms</h3>
                 <div class="portfolio__item-cta">
-                    <a href="http://github.com" class="btn" target="_blank">Github</a>
-                    <a href="http://dribbble.com/Alien_pixels" class="btn btn-primary" target="_blank">Live Demo</a>
+                    <a href="https://github.com/BalakrishnaCE/" class="btn" target="_blank">Github</a>  
                 </div>
             </article>
             <article class="portfolio__item">
                 <div class="portfolio__item-image">
-                    <img src="/Assets/portfolio1.jpg" alt="portfolio1">
+                    <img src="/Assets/portfolio4.jpg" alt="portfolio1">
                 </div>
-                <h3>This is portfolio item title</h3>
+                <h3>Working on it !!!</h3>
                 <div class="portfolio__item-cta">
-                    <a href="http://github.com" class="btn" target="_blank">Github</a>
-                    <a href="http://dribbble.com/Alien_pixels" class="btn btn-primary" target="_blank">Live Demo</a>
+                    <a href="https://github.com/BalakrishnaCE/" class="btn" target="_blank">Github</a> 
                 </div>
             </article>
             <article class="portfolio__item">
                 <div class="portfolio__item-image">
-                    <img src="/Assets/portfolio1.jpg" alt="portfolio1">
+                    <img src="/Assets/portfolio4.jpg" alt="portfolio1">
                 </div>
-                <h3>This is portfolio item title</h3>
+                <h3>Working on it !!!</h3>
                 <div class="portfolio__item-cta">
-                    <a href="http://github.com" class="btn" target="_blank">Github</a>
-                    <a href="http://dribbble.com/Alien_pixels" class="btn btn-primary" target="_blank">Live Demo</a>
+                    <a href="https://github.com/BalakrishnaCE/" class="btn" target="_blank">Github</a>
                 </div>
             </article>
             <article class="portfolio__item">
                 <div class="portfolio__item-image">
-                    <img src="/Assets/portfolio1.jpg" alt="portfolio1">
+                    <img src="/Assets/portfolio4.jpg" alt="portfolio1">
                 </div>
-                <h3>This is portfolio item title</h3>
+                <h3>Working on it !!!</h3>
                 <div class="portfolio__item-cta">
-                    <a href="http://github.com" class="btn" target="_blank">Github</a>
-                    <a href="http://dribbble.com/Alien_pixels" class="btn btn-primary" target="_blank">Live Demo</a>
+                    <a href="https://github.com/BalakrishnaCE/" class="btn" target="_blank">Github</a>
                 </div>
             </article>
            
@@ -385,11 +415,74 @@
     </section>
 </div>
 <!-- =======portfolio ends here======= -->
+
+
 <!-- =======contact here======= -->
 <div>
-    <section id="contact"></section>
+    <section id="contact">
+        <h5>Get in touch</h5>
+        <h2>Contact Me</h2>
+        <div class="container contact__container">
+            <div class="contact__options">
+                <article class="contact__option">
+                    <i class="fa fa-envelope-o contact__option-icon" aria-hidden="true"></i>
+                    <h4>Email</h4>
+                    <h5>balakrishnace@gmail.com</h5>
+                    <a href="mailto:balakrishnace@gmail.com" target="_blank">send a message</a>
+                </article>
+                <article class="contact__option">
+                    <i class="fa fa-facebook-square contact__option-icon" aria-hidden="true"></i>
+                    <h4>facebook</h4>
+                    <h5>Balakrishna</h5>
+                    <a href="https://www.facebook.com/profile.php?id=100070025555498" target="_blank">send a message</a>
+                </article>
+                <article class="contact__option">
+                    <i class="fa fa-whatsapp contact__option-icon" aria-hidden="true"></i>
+                    <h4>WhatsApp</h4>
+                    <h5>+91 9066850360</h5>
+                    <a href="https://api.whatsapp.com/send?phone=+919066850360" target="_blank">send a message</a>
+                </article>
+            </div>
+            <form id="mail" onsubmit="event()">
+                <input type="text" name="name" placeholder="your full Name" required>
+                <input type="email" name="email" placeholder="your Email" required>
+                <textarea name="message"  rows="7" placeholder="Your message" required></textarea>
+                <button type="submit" class="btn btn-primary"> Send Message</button>
+            </form>
+        </div>
+    </section>
 </div>
-<!-- =======contact here======= -->
+<!-- =======contact ends here======= -->
+
+
+<!-- =======footer starts here======= -->
+
+<footer>
+    <a href="#" class="footer__logo"> <img class="footer__logo-img" src="/Assets/Logo.ico" alt=""> Balakrishna</a>
+
+    <ul class="permalinks">
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">about</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#service">Service</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contacts</a></li>
+    </ul>
+
+    <div class="footer__socials">
+        <a href="http://facebook.com"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+        <a href="http://instagram.com"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+        <a href="http://twitter.com"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="footer__copyright">
+        <small>&copy; Balakrishna webpage. No rghts reserved.</small>
+    </div>
+
+</footer>
+
+
+<!-- =======footer ends here======= -->
 
 
 

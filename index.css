@@ -8,6 +8,7 @@
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
+    transition: var(--transition);
 }
 
 :root{
@@ -139,9 +140,16 @@ section{
 /* =======   Header Styling   ======== */
 
 header{
-    height: 100vh;
     padding-top: 0rem;
     overflow: hidden;
+    margin-top: 0;
+}
+
+.header__mylogo{
+   display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
 }
 
 .header__container{
@@ -181,14 +189,14 @@ header{
 
 .me{
     background: linear-gradient(var(--color-big),transparent);
-    width: 50%;
-    height: 60%;
-    margin-top: 4rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
     border-radius: 24rem 24rem 0 0;
     overflow: hidden;
+    margin-top: 1.5rem;
     padding: 5rem 1.5rem 1.5rem;
-    left: 50%;
-    transform: translateX(50%) 
     
 }
 
@@ -218,6 +226,10 @@ header{
   
       .header__socials, .scroll__down{
         display: none;
+      }
+
+      .me{
+        width: 75%;
       }
 }
 
@@ -253,10 +265,12 @@ nav a:hover{
     background: rgba(0, 0,0,0.3);
 }
 
-nav a.active{
+
+ /* ***********post rectifying the focus content ill unlock this active************ */
+/* nav a.active{
     background: var(--color-bg);
     color: var(--color-white);
-}
+} */
 
 
 
@@ -312,7 +326,7 @@ nav a.active{
     cursor: default;
 }
 
-about__icon{
+.about__icon{
     color: var(--color-big);
     font-size: 1.4rem;
     margin-bottom: 1rem;
@@ -570,4 +584,170 @@ about__icon{
     gap: 1rem;
    }
 
+}
+
+/* =======Contacts Styling======== */
+.container.contact__container{
+    width: 58%;
+    display: grid;
+    grid-template-columns: 30% 58%;
+    gap: 12%;
+}
+.contact__options{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+.contact__option{
+    background :  rgba(83, 83, 83,0.5);
+    padding: 1.2rem;
+    border-radius: 1.2rem;
+    text-align: center;
+    border: 1px solid transparent;
+    transition: var(--transition);
+}
+.contact__option:hover{
+    background: transparent;
+    border: var(--color-big);
+
+}
+
+.contact__option-icon{
+    color: var(--color-big);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.contact__option a{
+    margin-top: 0.7rem;
+    display: inline-block;
+    font-size: 0.8rem;
+}
+.contact__option h5{
+    color: var(--color-small);
+}
+
+
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+input, textarea{
+    width: 100%;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    background: transparent;
+    border: 2px solid var(--color-big);
+    resize: none;
+    color: var(--color-white);
+
+}
+
+/* =======Media Quesries for contact ======== */
+
+@media screen  and (max-width: 1024px){
+    .container.contact__container{
+        grid-template-columns: 1fr;
+        gap: 2rem;
+
+    }
+}
+    
+      
+    
+@media screen  and (max-width: 600px){
+    .container.contact__container{
+        grid-template-columns: 1fr;
+        width: var(--container-width-sm);
+        
+    }
+}
+
+
+
+
+/* =======Footer Styling ======== */
+
+footer{
+    background: var(--color-big);
+    padding: 3rem 0;
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 7rem;
+}
+
+
+footer a{
+    color: var(--color-bg);
+
+}
+
+.footer__logo{
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    display: inline-block;
+}
+
+.permalinks{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin: 0 auto 3rem;
+}
+
+.footer__socials{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 4rem;
+}
+
+
+.footer__socials a{
+    background:  var(--color-bg);
+    color: var(--color-white);
+    padding: 0.8rem;
+    border-radius: 0.7rem;
+    display: flex;
+    border: 1px solid transparent;
+}
+
+.footer__socials a:hover{
+    background: transparent;
+    color: var(--color-bg);
+    border-color: var(--color-bg);
+}
+
+.footer__copyright{
+    margin-bottom: 4rem;
+    color: var(--color-bg);
+}
+
+.footer__logo-img{
+    background-color: var(--color-bg);
+    display: grid;
+    height: 10rem;
+    border-radius: 50%;
+    
+        
+}
+
+/* =======Media Quesries for footer======== */
+  
+      
+    
+@media screen  and (max-width: 600px){
+    .permalinks{
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .footer__socials{
+        margin-bottom: 2.6rem;
+    }
 }
